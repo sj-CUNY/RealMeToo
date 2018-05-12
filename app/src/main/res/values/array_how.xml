@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="feel">
+    <item> I was too ashamed to react</item>
+    <item> I was too afraid.. log kya kahenge</item>
+    <item> I was afraid that my parents wont let me go out anymore</item>
+        <item> I was angry, wanted to punch him but could not</item>
+    </array>
+</resources>
