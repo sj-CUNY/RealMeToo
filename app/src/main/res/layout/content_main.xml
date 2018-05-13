@@ -39,21 +39,22 @@
 
     <TextView
         android:id="@+id/question1"
-        android:textAlignment="center"
-
         android:layout_width="match_parent"
+
         android:layout_height="29dp"
         android:layout_marginRight="8dp"
-
         android:layout_marginTop="8dp"
 
         android:text="@string/question1"
-        android:visibility="visible"
+
+        android:textAlignment="center"
         android:textColor="@color/colorAccent"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:visibility="visible"
 
         app:layout_constraintBottom_toTopOf="@+id/spinner_wh"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Title" />
@@ -70,13 +71,53 @@
         android:layout_marginTop="8dp"
         android:spinnerMode="dropdown"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/feel"
+        app:layout_constraintBottom_toTopOf="@+id/where"
         app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/question1"
         app:layout_constraintVertical_bias="0.017" />
 
+    <TextView
+        android:id="@+id/where"
+        android:layout_width="305dp"
+        android:layout_height="38dp"
+        android:text="@string/question3"
+        android:textAlignment="center"
+
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/colorAccent"
+
+        android:textColorLink="@android:color/holo_red_light"
+        android:textSize="20sp"
+
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/feel"
+
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/home"
+        app:layout_constraintTop_toBottomOf="@id/spinner_wh" />
+
+
+    <CheckBox
+        android:id="@+id/home"
+        android:layout_width="29dp"
+        android:layout_height="42dp"
+
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="26dp"
+
+        android:layout_marginTop="8dp"
+        android:checked="false"
+        android:textAlignment="center"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/feel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/where"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_wh" />
 
     <TextView
         android:id="@+id/feel"
@@ -98,7 +139,7 @@
         app:layout_constraintHorizontal_bias="0.974"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinner_wh" />
+        app:layout_constraintTop_toBottomOf="@id/where" />
 
     <Spinner
         android:id="@+id/spin_how"
@@ -209,5 +250,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/myAge"
         app:layout_constraintVertical_bias="0.474" />
+
 
 </android.support.constraint.ConstraintLayout>

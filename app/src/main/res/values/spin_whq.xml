@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="spin_whq">
-        <item>He touched and walked away pretending it never happened</item>
-        <item>He followed me around and continued harrassing me</item>
-        <item>He aggressively stalked me</item>
+        <item></item>
+        <item>Touched and walked away pretending it never happened</item>
+        <item>Followed me around and continued harrassing me</item>
+        <item>Aggressively stalked me</item>
     </string-array>
 
 </resources>

@@ -9,6 +9,9 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_login">Sign in</string>
     <string name="btn_text">Report</string>
-    <string name="MyAge">My Age</string>
+    <string name="MyAge"></string>
+    <string name="question3">Did this happen at home?</string>
+    <string name="title_activity_maps">Where are you?</string>
+    <string name="rationale">We ask for your location so that we can document areas where problems exists. Our purpose is to raise awareness so that we can influence mass action with or without government support. Rest assured, we will not share your exact address with anyone.</string>
 </resources>
 

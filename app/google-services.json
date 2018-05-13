@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "93149870602",
+    "firebase_url": "https://metoorealpeople.firebaseio.com",
+    "project_id": "metoorealpeople",
+    "storage_bucket": "metoorealpeople.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93149870602:android:1f11f87ad509e36c",
+        "android_client_info": {
+          "package_name": "com.forrealpeople.metoo.metoo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "93149870602-ch5smmpeq9vp4rv54fa4i5pgfkuid9k9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.forrealpeople.metoo.metoo",
+            "certificate_hash": "e725d1d305ac62af3c85baa77ba44a19e64eb064"
+          }
+        },
+        {
+          "client_id": "93149870602-od1a8nnj6imvnrjcvjtpkq09lbe9jna5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZtDTvKJNodvPPfakEoxriP6DSNE4QQ_8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "93149870602-od1a8nnj6imvnrjcvjtpkq09lbe9jna5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
