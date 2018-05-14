@@ -54,17 +54,18 @@ public class MainActivity extends AppCompatActivity {
     LocationRequests ourLocListener;
     private FirebaseAuth mAuth;
     private FirebaseDatabase mDatabase;
-    Long userid;
+    String userid;
     Random randId;
     Spinner dropdown1;
     Spinner dropdown2;
+    FirebaseUser user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mAuth = FirebaseAuth.getInstance();
         ourLocListener = new LocationRequests(this);
         randId = new Random();
-        userid = randId.nextLong();
+        userid = " ";
          myLocation = ourLocListener.getMyLastKnownLocation(this);
         message = new JSONObject();
         setContentView(R.layout.activity_main);
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                             FirebaseUser user = mAuth.getCurrentUser();
+                              user = mAuth.getCurrentUser();
                          } else {
                             // If sign in fails, display a message to the user.
                          }
@@ -214,10 +215,10 @@ public class MainActivity extends AppCompatActivity {
                 } catch (JSONException jex) {
                     Toast.makeText(thisActivity,jex.getMessage(), Toast.LENGTH_LONG).show();
                 }
-            /*    Iterator keys = message.keys();
+                /*Iterator keys = message.keys();
                 while(keys.hasNext())
-                    message.remove(keys.next().toString());
-*/
+                    message.remove(keys.next().toString());*/
+
             }
         });
 
@@ -228,12 +229,13 @@ public class MainActivity extends AppCompatActivity {
 // Write a message to the database
             Long timeNow = System.currentTimeMillis();
             Map<String, String> userMap= new HashMap<>();
-            userMap.put(timeNow.toString(), message.toString());
+            String msg = message.toString();
+            userMap.put(timeNow.toString(), msg);
  //           userMap.put("timestamp", timeNow.toString());
    //         userMap.put("userid", userid.toString());
             mDatabase = FirebaseDatabase.getInstance();
-
-            DatabaseReference mref = mDatabase.getReference(userid.toString());
+            userid = user.getUid();
+            DatabaseReference mref = mDatabase.getReference(userid);
             if (mref != null) {
                 mref = mref.push();
 
